@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StopWatt — Slash Your Electric Bill Up to 57% | Available Worldwide</title>
+  <meta name="description" content="StopWatt stabilizes your home's electrical current so appliances run efficiently and your monthly bill drops. Now available in 6 countries. 60-day money-back guarantee." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 Free — professional icons (never emojis for UI) -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Flag Icons — professional SVG country flags (lipis/flag-icons) -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.11.0/css/flag-icons.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /* ─── CSS Variables ─────────────────────────────────── */
+    :root {
+      --primary:       #16a34a;
+      --primary-dark:  #15803d;
+      --primary-light: #f0fdf4;
+      --secondary:     #f0fdf4;
+      --bg:            #ffffff;
+      --dark:          #0f172a;
+      --text:          #1e293b;
+      --text-muted:    #64748b;
+      --cta-bg:        #16a34a;
+      --cta-text:      #ffffff;
+      --alert-bg:      #0f172a;
+      --trust-bg:      #f8fafc;
+      --border:        #e2e8f0;
+      --star:          #f59e0b;
+
+      --font-heading:  'Poppins', sans-serif;
+      --font-body:     'Poppins', sans-serif;
+
+      --radius-card:   8px;
+      --radius-btn:    50px;
+      --radius-img:    12px;
+      --shadow-card:   0 8px 32px rgba(0,0,0,0.10);
+      --shadow-hero:   0 24px 48px rgba(0,0,0,0.18);
+      --transition:    all 0.2s ease;
+    }
+
+    /* ─── Reset & Base ──────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ─── Buttons ───────────────────────────────────────── */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--cta-bg);
+      color: var(--cta-text);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 16px 36px;
+      border-radius: var(--radius-btn);
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      transition: var(--transition);
+      line-height: 1.2;
+    }
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(22,163,74,0.35);
+    }
+
+    /* ─── Shared Section Elements ───────────────────────── */
+    .section-label {
+      display: inline-block;
+      background: var(--secondary);
+      color: var(--primary);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 5px 14px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+    }
+    .section-h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .section-body {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       B1 — ALERT BAR
+    ════════════════════════════════════════════════════════ */
+    #announcement-bar {
+      background: var(--alert-bg);
+      color: #fff;
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    .alert-badges {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .alert-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .alert-badge i {
+      color: #4ade80;
+      font-size: 0.9rem;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       B2 — NAVBAR
+    ════════════════════════════════════════════════════════ */
+    #header {
+      background: var(--dark);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.25);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .nav-logo img {
+      height: 36px;
+      width: auto;
+      object-fit: contain;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.80);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+    .nav-links a:hover { color: #fff; }
+    .nav-cta .btn-primary { padding: 10px 22px; font-size: 0.9rem; }
+
+    /* ═══════════════════════════════════════════════════════
+       B3 — HERO
+    ════════════════════════════════════════════════════════ */
+    #hero {
+      min-height: 85vh;
+      background: linear-gradient(135deg, var(--dark) 0%, #1e3a5f 100%);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+    #hero::after {
+      content: '';
+      position: absolute;
+      right: 0; top: 0; bottom: 0;
+      width: 50%;
+      background: linear-gradient(135deg, rgba(22,163,74,0.15) 0%, rgba(22,163,74,0.04) 100%);
+      clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      padding: 80px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-text { color: #fff; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(22,163,74,0.2);
+      border: 1px solid rgba(22,163,74,0.5);
+      color: #4ade80;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .hero-text h1 {
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .hero-text h1 .highlight { color: #4ade80; }
+    .hero-subtext {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    .hero-tagline {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .hero-tagline span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .hero-tagline i { color: #4ade80; font-size: 0.8rem; }
+    .hero-cta-group { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+    .hero-cta-group .btn-primary { font-size: 1.1rem; padding: 18px 40px; }
+    .hero-guarantee {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.55);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .hero-guarantee i { color: #4ade80; }
+    .hero-img-col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-product-img {
+      width: 85%;
+      max-width: 480px;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 24px 48px rgba(0,0,0,0.40));
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       B4 — TRUST STRIP
+    ════════════════════════════════════════════════════════ */
+    #trust {
+      background: var(--trust-bg);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 30px 0;
+    }
+    .trust-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px 48px;
+      align-items: center;
+    }
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .trust-icon {
+      width: 40px; height: 40px;
+      background: var(--secondary);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .trust-icon i {
+      color: var(--primary);
+      font-size: 1rem;
+    }
+    .trust-badge-text strong {
+      display: block;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--dark);
+    }
+    .trust-badge-text span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       B5 — SOCIAL PROOF
+    ════════════════════════════════════════════════════════ */
+    #social-proof {
+      background: var(--primary);
+      padding: 52px 0;
+      color: #fff;
+      text-align: center;
+    }
+    .social-proof-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+    }
+    .stat-item { padding: 8px 40px; }
+    .stat-number {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.1;
+    }
+    .stat-label { font-size: 0.9rem; opacity: 0.88; margin-top: 5px; }
+    .stat-divider {
+      width: 1px;
+      height: 52px;
+      background: rgba(255,255,255,0.25);
+      align-self: center;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       B5.5 — COUNTRY SELECTOR (Model B exclusive)
+    ════════════════════════════════════════════════════════ */
+    #country-selector {
+      padding: 88px 0;
+      background: var(--bg);
+      text-align: center;
+    }
+    .country-selector-header { margin-bottom: 48px; }
+    .country-selector-header .section-h2 { margin-bottom: 14px; }
+    .country-selector-header .section-body {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .country-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 820px;
+      margin: 0 auto 36px;
+    }
+
+    /* ─── Country Card ───────────────────────────────────── */
+    .country-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      padding: 0;
+      background: #fff;
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      box-shadow: var(--shadow-card);
+      cursor: pointer;
+      text-decoration: none;
+      color: var(--dark);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .country-card:hover {
+      border-color: var(--primary);
+      box-shadow: 0 16px 48px rgba(22,163,74,0.20);
+      transform: translateY(-6px);
+    }
+
+    /* Flag wrapper — top area with subtle tinted bg */
+    .country-flag-wrap {
+      width: 100%;
+      padding: 28px 24px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8fafc;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.2s ease;
+    }
+    .country-card:hover .country-flag-wrap {
+      background: var(--primary-light);
+      border-color: rgba(22,163,74,0.2);
+    }
+
+    /* flag-icons library: .fi sets base, country code sets image */
+    .country-flag-wrap .fi {
+      width: 72px;
+      height: 54px;                   /* 4:3 ratio — standard flag proportions */
+      border-radius: 5px;
+      box-shadow:
+        0 2px 8px rgba(0,0,0,0.18),
+        0 0 0 1px rgba(0,0,0,0.06);   /* subtle border around flag */
+      display: block;
+      background-size: cover;
+      background-position: center;
+      flex-shrink: 0;
+    }
+
+    /* Card bottom — name + cta */
+    .country-info {
+      width: 100%;
+      padding: 16px 16px 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .country-name {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.98rem;
+      color: var(--dark);
+      text-align: center;
+    }
+    .country-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--primary);
+      opacity: 0;
+      transform: translateY(5px);
+      transition: var(--transition);
+    }
+    .country-cta i { font-size: 0.7rem; }
+    .country-card:hover .country-cta {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .selector-trust {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+    .selector-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .selector-trust-item i {
+      color: var(--primary);
+      font-size: 0.9rem;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       B6 — BENEFITS
+    ════════════════════════════════════════════════════════ */
+    #benefits {
+      padding: 96px 0;
+      background: var(--trust-bg);
+    }
+    .benefits-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .benefits-text .section-h2 { margin-bottom: 20px; }
+    .section-body + .section-body { margin-top: 16px; }
+    .urgency-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      color: #dc2626;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 9px 18px;
+      border-radius: 50px;
+      margin-top: 28px;
+      margin-bottom: 28px;
+    }
+    .urgency-badge i { font-size: 0.9rem; }
+    .benefits-img img {
+      width: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 24px 48px rgba(0,0,0,0.15));
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       B7 — FEATURES GRID
+    ════════════════════════════════════════════════════════ */
+    #features {
+      padding: 96px 0;
+      background: var(--bg);
+    }
+    .features-header { text-align: center; margin-bottom: 56px; }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 52px;
+    }
+    .feature-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 32px 28px;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+      border-color: rgba(22,163,74,0.3);
+    }
+    .feature-icon-wrap {
+      width: 52px; height: 52px;
+      background: var(--secondary);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px;
+    }
+    .feature-icon-wrap i {
+      color: var(--primary);
+      font-size: 1.3rem;
+    }
+    .feature-title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+    .feature-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+    .features-cta { text-align: center; }
+
+    /* ═══════════════════════════════════════════════════════
+       B8 — REVIEWS
+    ════════════════════════════════════════════════════════ */
+    #reviews {
+      padding: 96px 0;
+      background: var(--trust-bg);
+    }
+    .reviews-header { text-align: center; margin-bottom: 56px; }
+    .reviews-subheadline {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-top: 12px;
+    }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    .review-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 28px;
+      box-shadow: var(--shadow-card);
+    }
+    .review-stars {
+      color: var(--star);
+      font-size: 1rem;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+    }
+    .review-body {
+      font-size: 0.95rem;
+      line-height: 1.72;
+      color: var(--text);
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+    .reviewer-name {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--dark);
+    }
+    .reviewer-location {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 2px;
+    }
+    .reviewer-location i { font-size: 0.75rem; }
+    .reviews-stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+      background: var(--secondary);
+      border: 1px solid rgba(22,163,74,0.2);
+      border-radius: var(--radius-card);
+      padding: 32px;
+    }
+    .review-stat { text-align: center; }
+    .review-stat .number {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .review-stat .label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       B9 — FAQ
+    ════════════════════════════════════════════════════════ */
+    #faq {
+      padding: 96px 0;
+      background: var(--bg);
+    }
+    .faq-header { text-align: center; margin-bottom: 56px; }
+    .faq-list { max-width: 800px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      padding: 20px 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--dark);
+      transition: var(--transition);
+    }
+    .faq-question:hover { color: var(--primary); }
+    .faq-icon {
+      flex-shrink: 0;
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      background: var(--secondary);
+      display: flex; align-items: center; justify-content: center;
+      transition: var(--transition);
+    }
+    .faq-icon i {
+      color: var(--primary);
+      font-size: 0.75rem;
+      transition: var(--transition);
+    }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .faq-answer p {
+      padding: 0 0 20px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+    .faq-item.open .faq-answer { max-height: 400px; }
+    .faq-item.open .faq-icon { background: var(--primary); }
+    .faq-item.open .faq-icon i { color: #fff; transform: rotate(45deg); }
+
+    /* ═══════════════════════════════════════════════════════
+       B10 — SEO BLOCK (crawler-visible, visually hidden)
+    ════════════════════════════════════════════════════════ */
+    #seo-content {
+      position: absolute;
+      left: -9999px;
+      width: 1px; height: 1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       B11 — FOOTER
+    ════════════════════════════════════════════════════════ */
+    #footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.72);
+      padding: 64px 0 32px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-logo {
+      height: 32px;
+      width: auto;
+      object-fit: contain;
+      margin-bottom: 18px;
+    }
+    .footer-brand p {
+      font-size: 0.875rem;
+      line-height: 1.72;
+      color: rgba(255,255,255,0.55);
+      max-width: 300px;
+    }
+    .footer-contact {
+      margin-top: 14px;
+      font-size: 0.875rem;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .footer-contact i { color: #4ade80; }
+    .footer-contact a { color: #4ade80; }
+    .footer-col h4 {
+      font-weight: 700;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.55);
+      transition: var(--transition);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .footer-col ul li a i { font-size: 0.75rem; }
+    .footer-col ul li a:hover { color: #4ade80; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .footer-disclaimer {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.38);
+      line-height: 1.65;
+    }
+    .footer-distributor {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.65;
+      padding: 12px 16px;
+      background: rgba(255,255,255,0.04);
+      border-left: 3px solid rgba(22,163,74,0.5);
+      border-radius: 0 4px 4px 0;
+    }
+    .footer-copyright {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* ─── Legal Modals ──────────────────────────────────── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 1000;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal-drawer {
+      background: #fff;
+      border-radius: 16px 16px 0 0;
+      width: 100%;
+      max-width: 720px;
+      max-height: 80vh;
+      overflow-y: auto;
+      padding: 40px 36px;
+      position: relative;
+      animation: slideUp 0.28s ease;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to   { transform: translateY(0); }
+    }
+    .modal-close {
+      position: absolute;
+      top: 20px; right: 24px;
+      background: #f1f5f9;
+      border: none;
+      cursor: pointer;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      font-size: 0.9rem;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-muted);
+      transition: var(--transition);
+    }
+    .modal-close:hover { background: #e2e8f0; color: var(--dark); }
+    .modal-drawer h2 {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 20px;
+    }
+    .modal-drawer h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin: 20px 0 8px;
+    }
+    .modal-drawer p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 10px;
+    }
+
+    /* ─── Responsive ────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 36px;
+        padding: 60px 24px;
+      }
+      .hero-cta-group { align-items: center; }
+      .hero-tagline { justify-content: center; }
+      .hero-img-col { order: -1; }
+      .hero-product-img { max-width: 260px; }
+      #hero::after { display: none; }
+
+      .benefits-layout { grid-template-columns: 1fr; gap: 40px; }
+      .benefits-img { order: -1; }
+
+      .features-grid { grid-template-columns: 1fr 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+      .nav-links { display: none; }
+    }
+
+    @media (max-width: 600px) {
+      .features-grid { grid-template-columns: 1fr; }
+      .trust-grid { gap: 16px 24px; }
+      .social-proof-grid { flex-direction: column; gap: 0; }
+      .stat-divider { width: 60px; height: 1px; }
+      .modal-drawer { padding: 28px 20px; }
+      .country-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+      .country-flag-wrap { padding: 20px 16px 16px; }
+      .country-flag-wrap .fi { width: 56px; height: 42px; }
+      .country-name { font-size: 0.88rem; }
+      .selector-trust { gap: 16px; }
+      .reviews-stats { gap: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     B1 — ALERT BAR
+════════════════════════════════════════════════════════ -->
+<div id="announcement-bar" role="banner">
+  <div class="alert-badges">
+    <div class="alert-badge">
+      <i class="fa-solid fa-bolt-lightning" aria-hidden="true"></i>
+      <strong>Limited Offer: Up to 57% OFF Today Only</strong>
+    </div>
+    <div class="alert-badge">
+      <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+      60-Day Money-Back Guarantee
+    </div>
+    <div class="alert-badge">
+      <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
+      Free Shipping on All Orders
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     B2 — NAVBAR
+════════════════════════════════════════════════════════ -->
+<header id="header" role="navigation">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo" aria-label="StopWatt Home">
+      <img
+        src="https://store.stopwatts.com/assets/images/energy-saving/logo-white.png"
+        alt="StopWatt official logo"
+        width="140" height="36"
+      />
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#benefits">Benefits</a>
+      <a href="#features">How It Works</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#country-selector" class="btn-primary">
+        <i class="fa-solid fa-globe" aria-hidden="true"></i>
+        Select Your Country
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════
+     B3 — HERO
+════════════════════════════════════════════════════════ -->
+<section id="hero" aria-labelledby="hero-h1">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <i class="fa-solid fa-award" aria-hidden="true"></i>
+        America's #1 Energy-Saving Device
+      </div>
+      <h1 id="hero-h1">
+        Stop Overpaying for<br />
+        Electricity — <span class="highlight">Starting This Month</span>
+      </h1>
+      <p class="hero-subtext">
+        StopWatt stabilizes and cleans the electrical current in your home so every appliance runs at peak efficiency. Families in 6 countries are cutting their electric bills by up to 57% — just by plugging it in.
+      </p>
+      <p class="hero-subtext">
+        No wiring. No electrician. No complex setup. Plug StopWatt into any outlet and let it work.
+      </p>
+      <div class="hero-tagline">
+        <span><i class="fa-solid fa-certificate" aria-hidden="true"></i> UL Certified</span>
+        <span><i class="fa-solid fa-leaf" aria-hidden="true"></i> RoHS Compliant</span>
+        <span><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> 60-Day Guarantee</span>
+      </div>
+      <div class="hero-cta-group">
+        <a href="#country-selector" class="btn-primary">
+          <i class="fa-solid fa-globe" aria-hidden="true"></i>
+          Choose Your Country &amp; Save 57%
+        </a>
+        <p class="hero-guarantee">
+          <i class="fa-solid fa-lock" aria-hidden="true"></i>
+          Risk-free — full refund if you don't save. No questions asked.
+        </p>
+      </div>
+    </div>
+    <div class="hero-img-col">
+      <img
+        class="hero-product-img"
+        src="https://store.stopwatts.com/assets/images/energy-saving/miraclewatt-product.png"
+        alt="StopWatt electricity stabilizer device — plug-in energy saver"
+        width="480" height="480"
+        loading="eager"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     B4 — TRUST STRIP
+════════════════════════════════════════════════════════ -->
+<section id="trust" aria-label="Trust indicators">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-badge">
+        <div class="trust-icon">
+          <i class="fa-solid fa-medal" aria-hidden="true"></i>
+        </div>
+        <div class="trust-badge-text">
+          <strong>UL Certified</strong>
+          <span>Safety tested &amp; verified</span>
+        </div>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-icon">
+          <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+        </div>
+        <div class="trust-badge-text">
+          <strong>60-Day Guarantee</strong>
+          <span>Full refund, no hassle</span>
+        </div>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-icon">
+          <i class="fa-solid fa-plug-circle-bolt" aria-hidden="true"></i>
+        </div>
+        <div class="trust-badge-text">
+          <strong>Plug-In Simple</strong>
+          <span>No installation required</span>
+        </div>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-icon">
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+        </div>
+        <div class="trust-badge-text">
+          <strong>4.7 / 5 Rating</strong>
+          <span>From 100,000+ customers</span>
+        </div>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-icon">
+          <i class="fa-solid fa-globe" aria-hidden="true"></i>
+        </div>
+        <div class="trust-badge-text">
+          <strong>Ships Worldwide</strong>
+          <span>6 countries with local offers</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     B5 — SOCIAL PROOF
+════════════════════════════════════════════════════════ -->
+<section id="social-proof" aria-label="Customer statistics">
+  <div class="container">
+    <div class="social-proof-grid">
+      <div class="stat-item">
+        <div class="stat-number">100,000+</div>
+        <div class="stat-label">Happy Customers Nationwide</div>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-item">
+        <div class="stat-number">Up to 57%</div>
+        <div class="stat-label">Monthly Bill Reduction</div>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-item">
+        <div class="stat-number">4.7★</div>
+        <div class="stat-label">Average Customer Rating</div>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-item">
+        <div class="stat-number">60-Day</div>
+        <div class="stat-label">Money-Back Guarantee</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     B5.5 — COUNTRY SELECTOR (Model B — Flag Page Presell)
+════════════════════════════════════════════════════════ -->
+<section id="country-selector" aria-labelledby="country-h2">
+  <div class="container">
+    <div class="country-selector-header">
+      <div class="section-label">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+        &nbsp;Choose Your Country
+      </div>
+      <h2 id="country-h2" class="section-h2">
+        Select Your Location to See<br />Your Local Offer
+      </h2>
+      <p class="section-body">
+        Available in 6 countries with local pricing, dedicated support,
+        and the same 60-day money-back guarantee — wherever you are.
+      </p>
+    </div>
+
+    <div class="country-grid" role="list">
+
+      <a href="https://www.fasttrack36.com/PHPWHDRK/25FXKK44/"
+         class="country-card" role="listitem"
+         aria-label="Shop StopWatt in United States"
+         rel="noopener">
+        <div class="country-flag-wrap">
+          <span class="fi fi-us" role="img" aria-label="United States flag"></span>
+        </div>
+        <div class="country-info">
+          <span class="country-name">United States</span>
+          <span class="country-cta">
+            Shop Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </span>
+        </div>
+      </a>
+
+      <a href="https://www.fasttrack36.com/PHPWHDRK/2GWR7368/"
+         class="country-card" role="listitem"
+         aria-label="Shop StopWatt in France"
+         rel="noopener">
+        <div class="country-flag-wrap">
+          <span class="fi fi-fr" role="img" aria-label="France flag"></span>
+        </div>
+        <div class="country-info">
+          <span class="country-name">France</span>
+          <span class="country-cta">
+            Shop Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </span>
+        </div>
+      </a>
+
+      <a href="https://www.fasttrack36.com/PHPWHDRK/2TL16R95/"
+         class="country-card" role="listitem"
+         aria-label="Shop StopWatt in New Zealand"
+         rel="noopener">
+        <div class="country-flag-wrap">
+          <span class="fi fi-nz" role="img" aria-label="New Zealand flag"></span>
+        </div>
+        <div class="country-info">
+          <span class="country-name">New Zealand</span>
+          <span class="country-cta">
+            Shop Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </span>
+        </div>
+      </a>
+
+      <a href="https://www.fasttrack36.com/PHPWHDRK/2TL2KN1Q/"
+         class="country-card" role="listitem"
+         aria-label="Shop StopWatt in Australia"
+         rel="noopener">
+        <div class="country-flag-wrap">
+          <span class="fi fi-au" role="img" aria-label="Australia flag"></span>
+        </div>
+        <div class="country-info">
+          <span class="country-name">Australia</span>
+          <span class="country-cta">
+            Shop Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </span>
+        </div>
+      </a>
+
+      <a href="https://www.fasttrack36.com/PHPWHDRK/2TL3ZJQC/"
+         class="country-card" role="listitem"
+         aria-label="Shop StopWatt in Spain"
+         rel="noopener">
+        <div class="country-flag-wrap">
+          <span class="fi fi-es" role="img" aria-label="Spain flag"></span>
+        </div>
+        <div class="country-info">
+          <span class="country-name">Spain</span>
+          <span class="country-cta">
+            Shop Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </span>
+        </div>
+      </a>
+
+      <a href="https://www.fasttrack36.com/PHPWHDRK/2TLNM5KM/"
+         class="country-card" role="listitem"
+         aria-label="Shop StopWatt in Germany"
+         rel="noopener">
+        <div class="country-flag-wrap">
+          <span class="fi fi-de" role="img" aria-label="Germany flag"></span>
+        </div>
+        <div class="country-info">
+          <span class="country-name">Germany</span>
+          <span class="country-cta">
+            Shop Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </span>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="selector-trust" role="note">
+      <div class="selector-trust-item">
+        <i class="fa-solid fa-lock" aria-hidden="true"></i>
+        Secure Checkout
+      </div>
+      <div class="selector-trust-item">
+        <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+        60-Day Money-Back Guarantee
+      </div>
+      <div class="selector-trust-item">
+        <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
+        Free Shipping
+      </div>
+      <div class="selector-trust-item">
+        <i class="fa-solid fa-headset" aria-hidden="true"></i>
+        Dedicated Local Support
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     B6 — BENEFITS
+════════════════════════════════════════════════════════ -->
+<section id="benefits" aria-labelledby="benefits-h2">
+  <div class="container">
+    <div class="benefits-layout">
+      <div class="benefits-text">
+        <div class="section-label">Why StopWatt Works</div>
+        <h2 id="benefits-h2" class="section-h2">
+          Your Utility Company Won't Tell You This — But Your Home Is Wasting Money Every Day
+        </h2>
+        <p class="section-body">
+          The average home loses a significant portion of electrical energy to "dirty electricity" — unstable currents, voltage spikes, and reactive power that your appliances generate but your meter still charges you for. Most households never know this is happening. They just pay the bill.
+        </p>
+        <p class="section-body">
+          StopWatt's patented stabilization technology captures this wasted energy, cleans your home's electrical current, and redistributes it efficiently across all your devices. Your appliances run smoother, last longer, and your monthly bill drops — often within the first 30 days. Customers like Melisa H. from St. Louis reported saving $33 her first month, $45 the second, and $55 by the fourth month.
+        </p>
+        <div class="urgency-badge">
+          <i class="fa-solid fa-fire" aria-hidden="true"></i>
+          High demand — stock running low. Order now to lock in 57% off.
+        </div>
+        <a href="#country-selector" class="btn-primary">
+          <i class="fa-solid fa-globe" aria-hidden="true"></i>
+          Select Your Country &amp; Start Saving
+        </a>
+      </div>
+      <div class="benefits-img">
+        <img
+          src="https://store.stopwatts.com/assets/images/energy-saving/miraclewatt-product.png"
+          alt="StopWatt plug-in electricity stabilizer showing energy savings"
+          width="480" height="480"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     B7 — FEATURES GRID
+════════════════════════════════════════════════════════ -->
+<section id="features" aria-labelledby="features-h2">
+  <div class="container">
+    <div class="features-header">
+      <div class="section-label">How It Works</div>
+      <h2 id="features-h2" class="section-h2">
+        Six Reasons StopWatt Pays for Itself — Fast
+      </h2>
+    </div>
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon-wrap">
+          <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+        </div>
+        <div class="feature-title">Stabilizes Electrical Current</div>
+        <p class="feature-desc">StopWatt's capacitor technology evens out irregular electrical current entering your home, so your appliances get clean, stable power — not chaotic spikes that waste energy and wear out components.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-wrap">
+          <i class="fa-solid fa-filter" aria-hidden="true"></i>
+        </div>
+        <div class="feature-title">Removes Dirty Electricity</div>
+        <p class="feature-desc">High-frequency electrical noise generated by your own devices gets filtered out before it cycles back into your wiring. Less noise means less wasted power and a measurable drop on your utility bill.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-wrap">
+          <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+        </div>
+        <div class="feature-title">Protects Your Appliances</div>
+        <p class="feature-desc">Voltage spikes are the silent killer of refrigerators, TVs, and HVAC systems. StopWatt acts as a buffer, extending the lifespan of your appliances and saving you from unexpected repair costs.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-wrap">
+          <i class="fa-solid fa-plug" aria-hidden="true"></i>
+        </div>
+        <div class="feature-title">Zero Installation Required</div>
+        <p class="feature-desc">No electrician. No tools. No special skills. Just plug StopWatt into any standard outlet and it immediately begins working across your entire home's electrical system — in seconds.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-wrap">
+          <i class="fa-solid fa-medal" aria-hidden="true"></i>
+        </div>
+        <div class="feature-title">UL Certified &amp; RoHS Compliant</div>
+        <p class="feature-desc">StopWatt has passed rigorous independent safety testing. Every unit meets the highest safety standards for residential electrical use — certified by the same body that approves electronics worldwide.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-wrap">
+          <i class="fa-solid fa-chart-line-down" aria-hidden="true"></i>
+        </div>
+        <div class="feature-title">Results You See on the Bill</div>
+        <p class="feature-desc">Unlike other "energy-saving" gadgets, StopWatt's results show up on your actual electric bill — not just on a display screen. Most customers report measurable savings within their first billing cycle.</p>
+      </div>
+
+    </div>
+    <div class="features-cta">
+      <a href="#country-selector" class="btn-primary">
+        <i class="fa-solid fa-globe" aria-hidden="true"></i>
+        Get StopWatt — 57% Off Today
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     B8 — REVIEWS
+════════════════════════════════════════════════════════ -->
+<section id="reviews" aria-labelledby="reviews-h2">
+  <div class="container">
+    <div class="reviews-header">
+      <div class="section-label">Verified Customer Results</div>
+      <h2 id="reviews-h2" class="section-h2">
+        What Customers Are Saying About StopWatt
+      </h2>
+      <p class="reviews-subheadline">
+        Real purchases. Real bills. Real savings — verified across 6 countries.
+      </p>
+    </div>
+    <div class="reviews-grid">
+
+      <div class="review-card">
+        <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="review-body">
+          "I'm so surprised by the amount we saved with these StopWatt devices… literally, you just plug them in and that's it! My wife was shocked when we got our first bill and we saved $35!"
+        </p>
+        <div class="reviewer-name">Kevin H.</div>
+        <div class="reviewer-location">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          Syracuse, NY &middot; Verified Purchase
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="review-body">
+          "In the first month, we saved $33. The second month, $45. The third month, $52. Fourth month, $55. It just keeps getting better — I tell everyone I know about this."
+        </p>
+        <div class="reviewer-name">Melisa H.</div>
+        <div class="reviewer-location">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          St. Louis, MO &middot; Verified Purchase
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="review-body">
+          "StopWatt has really made something special here. I'm not entirely sure how it works, but the savings are REAL! My electric bill went down noticeably and has stayed down every month since."
+        </p>
+        <div class="reviewer-name">Brenda S.</div>
+        <div class="reviewer-location">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          Orlando, FL &middot; Verified Purchase
+        </div>
+      </div>
+
+    </div>
+    <div class="reviews-stats">
+      <div class="review-stat">
+        <div class="number">4.7★</div>
+        <div class="label">Average Rating</div>
+      </div>
+      <div class="review-stat">
+        <div class="number">100,000+</div>
+        <div class="label">Verified Customers</div>
+      </div>
+      <div class="review-stat">
+        <div class="number">94%</div>
+        <div class="label">Would Recommend</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     B9 — FAQ
+════════════════════════════════════════════════════════ -->
+<section id="faq" aria-labelledby="faq-h2">
+  <div class="container">
+    <div class="faq-header">
+      <div class="section-label">Frequently Asked Questions</div>
+      <h2 id="faq-h2" class="section-h2">
+        Everything You Need to Know About StopWatt
+      </h2>
+    </div>
+    <div class="faq-list" role="list">
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          How does StopWatt actually lower my electric bill?
+          <span class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>Your home's electrical system constantly experiences voltage fluctuations, power spikes, and reactive power that your meter still charges you for. StopWatt uses capacitor-based stabilization technology to smooth out these irregularities, so your appliances consume only the energy they actually need — reducing wasteful consumption and lowering your monthly bill.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          How long does it take to see results on my bill?
+          <span class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>Most customers notice a measurable difference within their first full billing cycle — typically 30 to 45 days. Results can vary depending on your home's size, the number of appliances, and your current electricity usage patterns. Many customers see savings that increase each month as the device continues to stabilize their home's electrical system.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          Is StopWatt safe? Will it damage my appliances?
+          <span class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>StopWatt is fully UL Certified and RoHS Compliant — the same safety standards required for all electronics sold in the United States and internationally. Far from damaging appliances, StopWatt actually extends their lifespan by protecting them from voltage spikes and dirty electricity that cause internal wear over time. It is completely safe to leave plugged in 24/7.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          How many StopWatt units do I need for my home?
+          <span class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>For a standard home up to 1,500 sq ft, one unit is typically sufficient. For larger homes or homes with heavy appliance use (HVAC, electric water heaters, large refrigerators), two or three units — placed in different rooms — maximize the stabilization effect and potential savings. Our multi-unit bundles offer the best value per unit.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          What is your money-back guarantee?
+          <span class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>We offer a full 60-day money-back guarantee. If you are not satisfied with your results for any reason within 60 days of purchase, contact our support team and we will process a complete refund — no questions asked. We take all the risk so you don't have to. This guarantee applies to all 6 countries we ship to.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          Does StopWatt require any installation or professional help?
+          <span class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>No — absolutely none. StopWatt plugs into any standard wall outlet. There are no tools, no wiring changes, no electrician visits, and no technical knowledge required. It starts working immediately after you plug it in. Setup takes under 10 seconds regardless of which country you're in.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          Which countries do you ship to and how fast is shipping?
+          <span class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>StopWatt currently ships to United States, France, New Zealand, Australia, Spain, and Germany — each with dedicated local support and free shipping. Orders are typically processed within 1–2 business days. Delivery times vary by country but generally arrive within 5–10 business days. Select your country above to see your local offer and shipping details.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     B10 — SEO BLOCK (visually hidden, crawler-readable)
+════════════════════════════════════════════════════════ -->
+<section id="seo-content" aria-hidden="true">
+  <h2>What Is an Electricity Stabilizer and How Does It Work?</h2>
+  <p>An <strong>electricity stabilizer</strong> is a device designed to regulate and smooth the flow of electrical current entering a home or building. The average residential electrical system experiences constant fluctuations — voltage spikes, sags, and high-frequency interference collectively known as <strong>dirty electricity</strong>. These irregularities are caused by a combination of factors including power grid inconsistencies, the inductive loads created by motors and compressors in common appliances, and interference from digital electronics. A quality <strong>energy saving device</strong> like StopWatt addresses these issues by using capacitor-based reactive power compensation technology, which stabilizes voltage and reduces the amount of energy consumed — resulting in measurable reductions on monthly utility bills for residential users across the United States, France, New Zealand, Australia, Spain, and Germany.</p>
+
+  <h2>How StopWatt's Stabilization Technology Reduces Electricity Consumption</h2>
+  <p>The core mechanism behind <strong>StopWatt electricity savings</strong> lies in reactive power management. In any home electrical system, appliances with electric motors — refrigerators, air conditioners, washing machines, and HVAC units — generate reactive power as a byproduct of their operation. This reactive power does not perform useful work but is still measured by your utility meter, contributing to higher bills. StopWatt's internal capacitors absorb and store this reactive power locally, releasing it back into the circuit as needed. This process, known as <strong>power factor correction</strong>, reduces the total load drawn from the grid, which directly translates to lower energy consumption. Additionally, the device's filtering capability removes electromagnetic interference and high-frequency noise, protecting sensitive electronics and helping motors run at their intended efficiency levels.</p>
+
+  <h2>Who Benefits Most from a Plug-In Energy Saving Device?</h2>
+  <p>Homeowners with high monthly electricity bills are the primary beneficiaries of a <strong>plug-in energy saver</strong> like StopWatt. Specifically, homes that rely on multiple large motor-driven appliances — central air conditioning, electric dryers, refrigerators, sump pumps, and pool equipment — tend to experience the most significant reductions in consumption. Older homes with aging wiring may also benefit substantially, as outdated electrical infrastructure is particularly susceptible to power quality issues. Renters in apartments with electric heating or cooling systems can also see meaningful results. Because <strong>StopWatt requires no installation</strong> and works with standard outlets found in every residence across its six supported countries, it is accessible to virtually any household looking to reduce their monthly energy costs without any renovation or professional assistance.</p>
+
+  <h2>How to Maximize Your Results with StopWatt</h2>
+  <p>To get the best results from a <strong>home energy management device</strong>, strategic placement matters. For a single-story home under 1,500 square feet, one unit placed near your main electrical panel or in a central living area is generally sufficient. For larger homes, placing one unit in the area of your highest-consumption appliances — typically the kitchen or utility room — and a second near the HVAC system will maximize the stabilization effect. It is also helpful to compare your electric bills month-over-month after installation, as <strong>electricity cost reduction</strong> results are cumulative: the stabilization effect becomes more pronounced as the device optimizes the reactive power cycle in your home. Many users report that savings increase steadily over the first three to four billing cycles.</p>
+
+  <h2>Frequently Asked Questions About Home Electricity Saving Devices</h2>
+  <p>Consumers researching <strong>how to reduce electric bills</strong> often ask whether plug-in devices like StopWatt are legitimate or simply a gimmick. The answer lies in the underlying physics: reactive power compensation and power factor correction are well-established electrical engineering principles used by commercial and industrial facilities for decades. What StopWatt brings to market is a consumer-grade, UL-certified version of this technology in a compact, plug-in form factor. Another common question is whether <strong>electricity stabilizers are safe</strong> — StopWatt carries full UL certification, which is the gold standard for electrical safety testing, and RoHS compliance ensuring it meets standards for hazardous substances in all supported markets including the European Union countries (France, Spain, Germany).</p>
+
+  <h2>Why Quality Matters When Choosing an Energy Saving Product</h2>
+  <p>The <strong>energy saving device market</strong> includes a wide range of products with varying levels of engineering quality and certification. Not all plug-in stabilizers are created equal — many cheap alternatives use substandard components that can fail or pose hazards. When evaluating any <strong>home electricity reducer</strong>, key indicators of quality include UL certification, transparent documentation of the technology used, a meaningful satisfaction guarantee, and verifiable customer results. StopWatt meets all of these criteria with its UL certification, RoHS compliance, documented capacitor-based reactive power technology, 60-day money-back guarantee, and thousands of verified customer reviews showing real bill reductions from households across the United States, France, New Zealand, Australia, Spain, and Germany.</p>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does it take for StopWatt to lower my electric bill?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most customers see measurable savings within their first billing cycle, typically 30 to 45 days after installation. Results can increase over subsequent months as the device continues to optimize the reactive power cycle in your home's electrical system."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is StopWatt safe to use in a residential home?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. StopWatt is UL Certified and RoHS Compliant, meeting the highest electrical safety standards for residential use. It is safe to leave plugged in continuously and will not harm your appliances or wiring."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which countries does StopWatt ship to?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "StopWatt currently ships to the United States, France, New Zealand, Australia, Spain, and Germany. Each country has dedicated local support and free shipping on all orders."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- ═══════════════════════════════════════════════════════
+     B11 — FOOTER
+════════════════════════════════════════════════════════ -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <img
+          class="footer-logo"
+          src="https://store.stopwatts.com/assets/images/energy-saving/logo-white.png"
+          alt="StopWatt official logo"
+          width="120" height="32"
+          loading="lazy"
+        />
+        <p>StopWatt is an electricity stabilizing device that helps homeowners reduce wasted energy and lower monthly electric bills. Available in the United States, France, New Zealand, Australia, Spain, and Germany.</p>
+        <div class="footer-contact">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          <a href="mailto:support@stopwatts.com">support@stopwatts.com</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#benefits"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Benefits</a></li>
+          <li><a href="#features"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> How It Works</a></li>
+          <li><a href="#reviews"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Reviews</a></li>
+          <li><a href="#faq"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> FAQ</a></li>
+          <li><a href="#country-selector"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Select Country</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a onclick="openModal('privacy')"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Privacy Policy</a></li>
+          <li><a onclick="openModal('terms')"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Terms of Service</a></li>
+          <li><a onclick="openModal('returns')"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Returns &amp; Refunds</a></li>
+          <li><a onclick="openModal('contact')"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-distributor">
+        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        &nbsp;<strong>Distributor Notice:</strong> This website is operated by an independent authorized distributor of StopWatt. We are not the manufacturer or brand owner. All trademarks, product names, and logos are the property of their respective owners. Individual results may vary.
+      </p>
+      <p class="footer-disclaimer">
+        * These statements have not been evaluated by any regulatory authority. StopWatt is not intended to diagnose, treat, cure, or prevent any condition. The savings examples shown reflect actual customer experiences and are not guaranteed for every user. Results depend on home size, appliance age, usage patterns, and local utility infrastructure. FTC Disclosure: Testimonials reflect individual experiences and are not representative of all customers.
+      </p>
+      <p class="footer-copyright">
+        &copy; 2026 StopWatt. All rights reserved. Distributed by an independent authorized distributor.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════
+     LEGAL MODALS
+════════════════════════════════════════════════════════ -->
+<div id="modal-privacy" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-privacy-title">
+  <div class="modal-drawer">
+    <button class="modal-close" onclick="closeModal('privacy')" aria-label="Close">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+    <h2 id="modal-privacy-title">Privacy Policy</h2>
+    <p>Last updated: 2026. StopWatt and its authorized distributors are committed to protecting your personal information.</p>
+    <h3>Information We Collect</h3>
+    <p>We collect information you provide directly (name, email, shipping address, payment information) when you place an order. We also collect usage data automatically through cookies and analytics tools to improve our website experience.</p>
+    <h3>How We Use Your Information</h3>
+    <p>Your information is used exclusively to process your order, provide customer support, send order updates, and (with your consent) inform you of promotions. We do not sell or rent your personal data to third parties.</p>
+    <h3>Data Security</h3>
+    <p>All payment transactions are encrypted using SSL technology. We maintain physical, electronic, and procedural safeguards to protect your information in compliance with applicable law, including GDPR for European customers.</p>
+    <h3>Your Rights</h3>
+    <p>You may request access to, correction of, or deletion of your personal data at any time by contacting us at support@stopwatts.com. EU residents have additional rights under GDPR including the right to data portability.</p>
+  </div>
+</div>
+
+<div id="modal-terms" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-terms-title">
+  <div class="modal-drawer">
+    <button class="modal-close" onclick="closeModal('terms')" aria-label="Close">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+    <h2 id="modal-terms-title">Terms of Service</h2>
+    <p>By purchasing from this website, you agree to the following terms and conditions. Please read them carefully before completing your order.</p>
+    <h3>Independent Distributor</h3>
+    <p>This website is operated by an independent authorized distributor of StopWatt. We are not the manufacturer. Purchases are fulfilled through the official StopWatt fulfillment network.</p>
+    <h3>Product Use</h3>
+    <p>StopWatt devices are designed for residential use with standard electrical outlets compatible with your country's electrical system. Do not modify, disassemble, or attempt to repair the device.</p>
+    <h3>Limitation of Liability</h3>
+    <p>Our liability is limited to the purchase price of the product. We are not responsible for indirect, consequential, or incidental damages. Results in energy savings are not guaranteed and depend on individual home conditions and usage patterns.</p>
+    <h3>Governing Law</h3>
+    <p>These terms are governed by the laws applicable to your country of purchase. Disputes shall be resolved through the appropriate legal channels in your jurisdiction.</p>
+  </div>
+</div>
+
+<div id="modal-returns" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-returns-title">
+  <div class="modal-drawer">
+    <button class="modal-close" onclick="closeModal('returns')" aria-label="Close">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+    <h2 id="modal-returns-title">Returns &amp; Refunds</h2>
+    <p>We stand behind StopWatt with a full 60-day money-back guarantee, valid in all 6 countries we serve.</p>
+    <h3>60-Day Money-Back Guarantee</h3>
+    <p>If you are not completely satisfied with your purchase for any reason within 60 days of delivery, we will issue a full refund of the purchase price — no questions asked.</p>
+    <h3>How to Request a Refund</h3>
+    <p>Email us at support@stopwatts.com with your order number and reason for return. Our team will respond within 1–2 business days with return instructions. Refunds are processed within 5–10 business days of receiving your return.</p>
+    <h3>International Returns</h3>
+    <p>For customers in France, New Zealand, Australia, Spain, and Germany: return shipping costs are the responsibility of the customer unless the item arrived damaged or defective. Refunds are issued in the original currency of purchase.</p>
+  </div>
+</div>
+
+<div id="modal-contact" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-contact-title">
+  <div class="modal-drawer">
+    <button class="modal-close" onclick="closeModal('contact')" aria-label="Close">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+    <h2 id="modal-contact-title">Contact Us</h2>
+    <p>Our customer support team is available Monday–Friday, 9am–5pm EST, serving customers in all 6 countries.</p>
+    <h3>Email Support</h3>
+    <p>For order inquiries, returns, or general questions: <a href="mailto:support@stopwatts.com" style="color: #16a34a; font-weight: 600;">support@stopwatts.com</a></p>
+    <h3>Response Time</h3>
+    <p>We aim to respond to all inquiries within 1–2 business days. For urgent matters related to your order, please include your order number in the subject line to expedite processing.</p>
+    <h3>Distributor Notice</h3>
+    <p>This website is operated by an independent authorized distributor. For manufacturer warranty inquiries, you may also contact StopWatt directly at their official website.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     JAVASCRIPT — FAQ + Modals
+════════════════════════════════════════════════════════ -->
+<script>
+  /* FAQ accordion */
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = this.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i) {
+        i.classList.remove('open');
+        i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        this.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  /* Legal modals */
+  function openModal(name) {
+    var el = document.getElementById('modal-' + name);
+    if (el) { el.classList.add('active'); document.body.style.overflow = 'hidden'; }
+  }
+  function closeModal(name) {
+    var el = document.getElementById('modal-' + name);
+    if (el) { el.classList.remove('active'); document.body.style.overflow = ''; }
+  }
+  document.querySelectorAll('.modal-overlay').forEach(function(overlay) {
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) { overlay.classList.remove('active'); document.body.style.overflow = ''; }
+    });
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.active').forEach(function(el) {
+        el.classList.remove('active'); document.body.style.overflow = '';
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
